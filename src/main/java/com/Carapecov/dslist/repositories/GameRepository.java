@@ -1,0 +1,9 @@
+package com.Carapecov.dslist.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.Carapecov.dslist.entities.Game;
+
+public interface GameRepository extends JpaRepository<Game, Long> {
+
+}
