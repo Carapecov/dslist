@@ -1,8 +1,7 @@
 package com.Carapecov.dslist.dto;
 
 import com.Carapecov.dslist.entities.Game;
-
-import jakarta.persistence.Column;
+import com.Carapecov.dslist.projections.GameMinProjection;
 
 public class GameminDTO {  
 	
@@ -19,7 +18,14 @@ public class GameminDTO {
 		imgUrl = entity.getImgUrl();
 		shortDescription = entity.getShortDescription();
 	}
-
+	public GameminDTO(GameMinProjection projection) {
+		id = projection.getId() ;
+		title = projection.getTitle() ;
+		year = projection.getYear() ;
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
+	}
+	
 	public Long getId() {
 		return id;
 	}
